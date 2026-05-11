@@ -1,0 +1,6 @@
+{
+  "name": "Solace Audit Monitor",
+  "description": "Real-time audit message routing system that monitors Solace broker topics for high-risk activities and alerts table-specific channels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Pit Boss: Casino Health Monitor",
+  "description": "Real-time monitoring dashboard for casino tables with Solace event broker integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
