@@ -21,4 +21,7 @@ casino-monitor:
 
 The demo will connect to a postgresql database that contains customer information.
 
+Demo Flow:
+
+<img width="1073" height="567" alt="image" src="https://github.com/user-attachments/assets/b52fa3de-96b8-43eb-8f36-8e5b37a833ef" />
 
