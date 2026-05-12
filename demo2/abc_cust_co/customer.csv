@@ -1,0 +1,56 @@
+CustomerID,FirstName,LastName,Email,Phone,CustomerType,CardType
+000001,John,Doe,john.doe@abccoffee.com,555-0101,VVIP, Ruby
+000002,Jane,Smith,jane.smith@abccoffee.com,555-0102,VIP, Platinum
+000003,Michael,Johnson,michael.johnson@abccoffee.com,555-0103,VIP,Platinum
+000004,Sarah,Williams,sarah.williams@abccoffee.com,555-0104,VIP,Platinum
+000005,David,Brown,david.brown@abccoffee.com,555-0105,VIP,Platinum
+000006,Emily,Jones,emily.jones@abccoffee.com,555-0106,Normal, Red
+000007,Robert,Davis,robert.davis@abccoffee.com,555-0107,Normal,Red
+000008,Lisa,Miller,lisa.miller@abccoffee.com,555-0108,Normal, Red
+000009,James,Wilson,james.wilson@abccoffee.com,555-0109,Normal, Red
+000010,Jennifer,Moore,jennifer.moore@abccoffee.com,555-0110,Normal, Red
+000011,Thomas,Taylor,thomas.taylor@abccoffee.com,555-0111,Normal, Red
+000012,Mary,Anderson,mary.anderson@abccoffee.com,555-0112,Normal, Red
+000013,Edward,Funnekotter,edward.funnekotter@solace.com,555-0113,Normal, Redal
+000014,Patricia,Jackson,patricia.jackson@abccoffee.com,555-0114,Normal, Red
+000015,Daniel,White,daniel.white@abccoffee.com,555-0115,Normal, Red
+000016,Linda,Harris,linda.harris@abccoffee.com,555-0116,Normal, Red
+000017,Mark,Martin,mark.martin@abccoffee.com,555-0117,Normal, Red
+000018,Elizabeth,Thompson,elizabeth.thompson@abccoffee.com,555-0118,Normal, Red
+000019,Joseph,Garcia,joseph.garcia@abccoffee.com,555-0119,Normal, Red
+000020,Nancy,Martinez,nancy.martinez@abccoffee.com,555-0120,Normal, Red
+000021,Paul,Robinson,paul.robinson@abccoffee.com,555-0121,VIP, Platinum
+000022,Karen,Clark,karen.clark@abccoffee.com,555-0122,VIP, Platinum
+000023,Donald,Rodriguez,donald.rodriguez@abccoffee.com,555-0123,Normal, Red
+000024,Betty,Lewis,betty.lewis@abccoffee.com,555-0124,Logistics Normal, Red
+000025,George,Lee,george.lee@abccoffee.com,555-0125,Production Normal, Red
+000026,Susan,Walker,susan.walker@abccoffee.com,555-0126,Normal, Red
+000027,Edward,Hall,edward.hall@abccoffee.com,555-0127,Normal, Red
+000028,Margaret,Allen,margaret.allen@abccoffee.com,555-0128,Normal, Red
+000029,Brian,Young,brian.young@abccoffee.com,555-0129,VVIP, Ruby
+000030,Dorothy,Hernandez,dorothy.hernandez@abccoffee.com,555-0130,VVIP, Ruby
+000031,Ronald,King,ronald.king@abccoffee.com,555-0131,Normal, Red
+000032,Lisa,Wright,lisa.wright@abccoffee.com,555-0132,Normal, Red
+000033,Anthony,Lopez,anthony.lopez@abccoffee.com,555-0133,Normal, Red
+000034,Kimberly,Hill,kimberly.hill@abccoffee.com,555-0134,Normal, Red
+000035,Kevin,Scott,kevin.scott@abccoffee.com,555-0135,Normal, Red
+000036,Helen,Green,helen.green@abccoffee.com,555-0136,Normal, Red
+000037,Jason,Adams,jason.adams@abccoffee.com,555-0137,Normal, Red
+000038,Sandra,Baker,sandra.baker@abccoffee.com,555-0138,Normal, Red
+000039,Matthew,Gonzalez,matthew.gonzalez@abccoffee.com,555-0139,Normal, Red
+000040,Ashley,Nelson,ashley.nelson@abccoffee.com,555-0140,Normal, Red
+000041,Steven,Carter,steven.carter@abccoffee.com,555-0141,Normal, Red
+000042,Donna,Mitchell,donna.mitchell@abccoffee.com,555-0142,Normal, Red
+000043,Andrew,Perez,andrew.perez@abccoffee.com,555-0143,Normal, Red
+000044,Carol,Roberts,carol.roberts@abccoffee.com,555-0144,Normal, Red
+000045,Kenneth,Turner,kenneth.turner@abccoffee.com,555-0145,Normal, Red
+000046,Michelle,Phillips,michelle.phillips@abccoffee.com,555-0146,Normal, Red
+000047,Joshua,Campbell,joshua.campbell@abccoffee.com,555-0147,VIP, Platinum
+000048,Kathleen,Parker,kathleen.parker@abccoffee.com,555-0148,Normal, Red
+000049,Gary,Evans,gary.evans@abccoffee.com,555-0149,VVIP, Ruby
+000050,Stephanie,Edwards,stephanie.edwards@abccoffee.com,555-0150,VIP, Platinum
+000051,Timothy,Collins,timothy.collins@abccoffee.com,555-0151,VIP, Platinum
+000052,Deborah,Stewart,deborah.stewart@abccoffee.com,555-0152,Normal, Red
+000053,Jeffrey,Sanchez,jeffrey.sanchez@abccoffee.com,555-0153,IT Normal, Red
+000054,Laura,Morris,laura.morris@abccoffee.com,555-0154,Normal, Red
+000055,Scott,Rogers,scott.rogers@abccoffee.com,555-0155,Normal, Red

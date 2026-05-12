@@ -1,0 +1,59 @@
+log:
+  stdout_log_level: INFO
+  log_file_level: DEBUG
+  log_file: table-event-mesh.log
+
+!include ../shared_config.yaml
+
+apps:
+  - name: table-event-mesh-app
+    app_module: sam_event_mesh_gateway.app
+    broker:
+      <<: *broker_connection
+
+    app_config:
+      namespace: ${NAMESPACE}
+      gateway_id: "table-event-mesh-gw-01"
+      artifact_service: *default_artifact_service
+      default_user_identity: "anonymous_event_mesh_user" # If no identity from event
+
+
+
+      # Data plane connection
+      event_mesh_broker_config:
+        broker_url: ${JIRA_EVENT_MESH_SOLACE_BROKER_URL}
+        broker_vpn: ${JIRA_EVENT_MESH_SOLACE_BROKER_VPN}
+        broker_username: ${JIRA_EVENT_MESH_SOLACE_BROKER_USERNAME}
+        broker_password: ${JIRA_EVENT_MESH_SOLACE_BROKER_PASSWORD}
+
+      event_handlers:
+        - name: "jira_issue_handler"
+          default_user_identity: "anonymous_event_mesh_user" # if no identity from event
+          subscriptions:
+            - topic: "tablegame/bct/>"
+              qos: 1
+          input_expression: "template:Detect unusual betting pattern: user_id={{text://input.payload:userID}} dealerID={{text://input.payload:dealerID}} winlose={{text://input.payload:winlose}} bettingamount={{text://input.payload:betAmount}} table_no={{text://input.payload:tableNo}}point_gain={{text://input.payload:betAmount}/1000}, insert this to table_game. convert all datetime object to string after getting from database. When generating SQL, cast all NUMERIC/DECIMAL columns to FLOAT (e.g. col::float) and all TIMESTAMP/DATE columns to TEXT (e.g. col::text). Do not return raw NUMERIC or TIMESTAMP types from the database.Print the table_no and bet amount on the results and proivde assessment on risk"
+          payload_encoding: "utf-8"
+          payload_format: "json"
+          target_agent_name: "OrchestratorAgent"
+          on_success: "table_audit_handler"
+          on_error: "error_response_handler"
+          forward_context:
+            correlation_id: "input.user_properties:correlation_id"
+            UserID: "input.payload:userID"
+            dealerID: "input.payload:dealerID"
+            winlose: "input.payload:winlose"
+            bettingAmount: "input.payload:betAmount"
+
+      output_handlers:
+        - name: "table_audit_handler"
+          topic_expression: "static:tablegame/audit"
+          payload_expression: "task_response:text"
+          payload_encoding: "utf-8"
+          payload_format: "json"
+          
+        - name: "error_response_handler"
+          topic_expression: "template:tablegame/error/{{text://user_data.forward_context:UserID}}"
+          payload_expression: "task_response:a2a_task_response.error"
+          payload_encoding: "utf-8"
+          payload_format: "json"

@@ -1,0 +1,88 @@
+log:
+  stdout_log_level: INFO
+  log_file_level: DEBUG
+  log_file: "agent_019db302_2240_7b00_9933_479ad2c0b303.log"
+
+apps:
+  - name: "agent_019db302_2240_7b00_9933_479ad2c0b303"
+    app_base_path: "."
+    app_module: "solace_agent_mesh.agent.sac.app"
+    broker:
+      dev_mode: ${SOLACE_DEV_MODE, false}
+      broker_url: ${SOLACE_BROKER_URL, ws://localhost:8080}
+      broker_username: ${SOLACE_BROKER_USERNAME, default}
+      broker_password: ${SOLACE_BROKER_PASSWORD, default}
+      broker_vpn: ${SOLACE_BROKER_VPN, default}
+      temporary_queue: ${USE_TEMPORARY_QUEUES, true}
+    app_config:
+      namespace: "${NAMESPACE}"
+      supports_streaming: true
+      agent_name: "agent_019db302_2240_7b00_9933_479ad2c0b303"
+      display_name: "Bet Monitoring Agent"
+      
+      instruction: |
+        You are a specialized betting behavior monitoring agent. Your role is to analyze user and customer betting patterns and identify potentially risky betting behavior on a betting table. This agent can also provide betting point information for customers
+
+        Your primary task is to:
+        1. Query the betting database to retrieve a user's betting history
+        2. Calculate the average amount of their last 20 bets
+        3. Compare their most recent bet to this average
+        4. Flag cases where the most recent bet exceeds the 20-bet average by 500% or more
+
+        When analyzing betting data:
+        - Use SQL queries to efficiently retrieve betting records for the specified user
+        - Ensure you're working with the correct chronological order of bets
+        - Perform accurate percentage calculations to determine if the threshold is exceeded
+        - Present your findings clearly, including the most recent bet amount, the 20-bet average, and the percentage increase
+
+        Communicate your findings in a clear, factual manner. If concerning patterns are detected, present the data objectively without making assumptions about user intent.
+      model:
+        model: "${LLM_SERVICE_GENERAL_MODEL_NAME}"
+        api_base: "${LLM_SERVICE_ENDPOINT}"
+        api_key: "${LLM_SERVICE_API_KEY}"
+      tools:
+        - tool_type: builtin-group
+          group_name: "data_analysis"
+        - tool_type: python
+          component_module: "sam_sql_database_tool.tools"
+          component_base_path: "."
+          class_name: "SqlDatabaseTool"
+          tool_config:
+            tool_name: "table_game_sql_query_019db355"
+            tool_description: "Query the table_game postgresql database."
+            connection_string: "postgresql://localhost:5432/table_game"
+      session_service:
+        type: ${PERSISTENCE_TYPE, sql}
+        database_url: ${DATABASE_URL, sqlite:///agent_019db302_2240_7b00_9933_479ad2c0b303.db}
+        default_behavior: PERSISTENT
+      artifact_service:
+        type: ${ARTIFACT_SERVICE_TYPE, filesystem}
+        base_path: ${ARTIFACT_BASE_PATH, /tmp/samv2}
+        artifact_scope: namespace
+      artifact_handling_mode: reference
+      enable_embed_resolution: true
+      enable_artifact_content_instruction: true
+      agent_card:
+        description: "Monitors customer betting patterns by analyzing historical betting data from a database. Identifies when a user\u0027s most recent bet significantly exceeds their typical betting behavior, specifically flagging cases where the latest bet is 500% higher than the average of their last 20 bets."
+        defaultInputModes: ["file", "text"]
+        defaultOutputModes: ["file", "text"]
+        skills:
+          - id: "analyze_betting_history"
+            name: "Analyze Betting History"
+            description: "Query and retrieve a user\u0027s historical betting data from the database to analyze patterns and trends."
+          - id: "detect_unusual_betting_spikes"
+            name: "Detect Unusual Betting Spikes"
+            description: "Identify when a user\u0027s most recent bet exceeds their average betting behavior by 500% or more compared to their last 20 bets."
+          - id: "calculate_betting_averages"
+            name: "Calculate Betting Averages"
+            description: "Compute statistical averages of betting amounts over specified time periods or bet counts to establish baseline behavior."
+          - id: "generate_betting_behavior_reports"
+            name: "Generate Betting Behavior Reports"
+            description: "Create comprehensive reports showing betting patterns, comparisons, and alerts for significant deviations from normal behavior."
+      agent_card_publishing:
+        interval_seconds: 10
+      agent_discovery:
+        enabled: false
+      inter_agent_communication:
+        allow_list: []
+        request_timeout_seconds: 30
