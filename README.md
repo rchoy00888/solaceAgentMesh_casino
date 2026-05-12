@@ -13,7 +13,7 @@ Casino:
 
 casino-pit:
 
-<img width="335" height="170" alt="image" src="https://github.com/user-attachments/assets/70ec7fa4-dfb3-481c-b90e-00765b7b3ae0" 
+<img width="335" height="170" alt="image" src="https://github.com/user-attachments/assets/70ec7fa4-dfb3-481c-b90e-00765b7b3ae0" />
 
 casino-monitor:
 
