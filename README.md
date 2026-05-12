@@ -19,7 +19,6 @@ casino-monitor:
 
 <img width="1959" height="458" alt="image" src="https://github.com/user-attachments/assets/34ebc1c0-cfac-4b18-ae1e-f47122fc50fb" />
 
-
-
+The demo will connect to a postgresql database that contains customer information.
 
 
