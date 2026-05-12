@@ -5,4 +5,21 @@ This repository simulates 3 different casino operations cases using Solace Agent
    (CUrrently set to 500% of average of last 20 bets).
 3. casino-monitor. This web page will display the events received and the evaluation results. A critical alert will be received when LLM detect the violation scenario.
 
-Note that SAM installation is not under the repository and only the config directory and sample database file are in the directory.
+Note that SAM installation is not under the repository and only the config directory and sample database file are in the directory. Sam configuration files are under the demo2 folder.
+
+Casino:
+
+<img width="391" height="208" alt="image" src="https://github.com/user-attachments/assets/a85633fa-479d-4ad1-bd0a-f4012b341158" />
+
+casino-pit:
+
+<img width="335" height="170" alt="image" src="https://github.com/user-attachments/assets/70ec7fa4-dfb3-481c-b90e-00765b7b3ae0" 
+
+casino-monitor:
+
+<img width="1959" height="458" alt="image" src="https://github.com/user-attachments/assets/34ebc1c0-cfac-4b18-ae1e-f47122fc50fb" />
+
+
+
+
+
