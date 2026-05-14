@@ -45,3 +45,15 @@ Event Flow:
 
 <img width="756" height="481" alt="image" src="https://github.com/user-attachments/assets/b1d0d22f-71ee-4ea3-871c-78fc7fd811d4" />
 
+Use Case:
+
+<img width="1749" height="968" alt="image" src="https://github.com/user-attachments/assets/f9c24aa5-4f7e-4c5c-8201-f352897890da" />
+
+<img width="1750" height="987" alt="image" src="https://github.com/user-attachments/assets/b23738a4-efd7-40c8-a1e9-fbdc3cd29528" />
+
+<img width="1751" height="978" alt="image" src="https://github.com/user-attachments/assets/bfa72501-b6e2-4745-a9df-59c9dd793e79" />
+
+<img width="1753" height="980" alt="image" src="https://github.com/user-attachments/assets/34cda54a-ce35-40c3-8191-b55daaf21d2c" />
+
+
+
