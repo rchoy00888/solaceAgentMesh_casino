@@ -29,39 +29,7 @@ Schema Info:
 
 1.  BetRsult:
 
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Generated Schema",
-  "type": "object",
-  "properties": {
-    "userID": {
-      "type": "string"
-    },
-    "betAmount": {
-      "type": "integer"
-    },
-    "tableno": {
-      "type": "string"
-    },
-    "dealerID": {
-      "type": "string"
-    },
-    "winlose": {
-      "type": "string"
-    },
-    "timestamp": {
-      "type": "string"
-    }
-  },
-  "required": [
-    "userID",
-    "betAmount",
-    "tableno",
-    "dealerID",
-    "winlose",
-    "timestamp"
-  ]
-}
+
 
 Sample:
 {
