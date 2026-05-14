@@ -73,3 +73,7 @@ Sample:
   "timestamp": "2026/05/14 12:00:00"
 }
 
+Event Flow:
+
+<img width="756" height="481" alt="image" src="https://github.com/user-attachments/assets/b1d0d22f-71ee-4ea3-871c-78fc7fd811d4" />
+
