@@ -25,3 +25,51 @@ Demo Flow:
 
 <img width="1073" height="567" alt="image" src="https://github.com/user-attachments/assets/b52fa3de-96b8-43eb-8f36-8e5b37a833ef" />
 
+Schema Info:
+
+1.  BetRsult:
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "userID": {
+      "type": "string"
+    },
+    "betAmount": {
+      "type": "integer"
+    },
+    "tableno": {
+      "type": "string"
+    },
+    "dealerID": {
+      "type": "string"
+    },
+    "winlose": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "userID",
+    "betAmount",
+    "tableno",
+    "dealerID",
+    "winlose",
+    "timestamp"
+  ]
+}
+
+Sample:
+{
+  "userID": "A13456",
+  "betAmount": 1000,
+  "tableno": "T00001",
+  "dealerID": "D12345",
+  "winlose":  "W",
+  "timestamp": "2026/05/14 12:00:00"
+}
+
